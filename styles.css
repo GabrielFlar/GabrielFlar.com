@@ -1,0 +1,280 @@
+/* Fuentes y configuración base */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #0a0a0a;
+}
+
+/* Efectos de brillo */
+.glow {
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
+  transition: all 0.3s ease;
+}
+
+.glow:hover {
+  box-shadow: 0 0 30px rgba(168, 85, 247, 0.6);
+}
+
+/* Efectos de escalado */
+.hover-scale {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-scale:hover {
+  transform: scale(1.05) translateY(-5px);
+}
+
+/* Animaciones de entrada */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fondo con gradiente */
+.gradient-bg {
+  background: linear-gradient(135deg, #000000 0%, #1a0033 50%, #4B0082 100%);
+}
+
+/* Contenedor de partículas */
+.particles-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* Partículas flotantes */
+.particle {
+  position: absolute;
+  background: #A855F7;
+  border-radius: 50%;
+  opacity: 0.6;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { 
+    transform: translateY(0px) rotate(0deg); 
+  }
+  50% { 
+    transform: translateY(-20px) rotate(180deg); 
+  }
+}
+
+/* Efecto de escritura */
+.typing-effect {
+  border-right: 2px solid #A855F7;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50% { 
+    border-color: transparent; 
+  }
+  51%, 100% { 
+    border-color: #A855F7; 
+  }
+}
+
+/* Efecto de cristal */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Tarjetas de proyecto */
+.project-card {
+  background: linear-gradient(145deg, #1a1a1a, #0f0f0f);
+  border: 1px solid rgba(168, 85, 247, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(168, 85, 247, 0.1), transparent);
+  transition: left 0.5s;
+}
+
+.project-card:hover::before {
+  left: 100%;
+}
+
+/* Navegación con blur */
+.nav-blur {
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(168, 85, 247, 0.2);
+}
+
+/* Badges de habilidades */
+.skill-badge {
+  background: linear-gradient(45deg, #A855F7, #EC4899);
+  background-size: 200% 200%;
+  animation: gradient-shift 3s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0% { 
+    background-position: 0% 50%; 
+  }
+  50% { 
+    background-position: 100% 50%; 
+  }
+  100% { 
+    background-position: 0% 50%; 
+  }
+}
+
+/* Formulario de contacto */
+.contact-form {
+  background: linear-gradient(145deg, rgba(26, 26, 26, 0.8), rgba(15, 15, 15, 0.8));
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(168, 85, 247, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .text-6xl {
+    font-size: 3rem;
+  }
+  
+  .md\:text-8xl {
+    font-size: 4rem;
+  }
+  
+  .text-xl {
+    font-size: 1.125rem;
+  }
+  
+  .md\:text-3xl {
+    font-size: 1.5rem;
+  }
+  
+  .particles-container {
+    display: none;
+  }
+}
+
+/* Mejoras para accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+  .fade-in {
+    animation: none;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .hover-scale {
+    transition: none;
+  }
+  
+  .hover-scale:hover {
+    transform: none;
+  }
+  
+  .particle {
+    animation: none;
+  }
+  
+  .skill-badge {
+    animation: none;
+  }
+  
+  .typing-effect {
+    animation: none;
+    border-right: none;
+  }
+}
+
+/* Estilos adicionales para mejor UX */
+.container {
+  max-width: 1200px;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus states para accesibilidad */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus {
+  outline: 2px solid #A855F7;
+  outline-offset: 2px;
+}
+
+/* Mejoras en el diseño de botones */
+button,
+.btn {
+  cursor: pointer;
+  user-select: none;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Estilos para los iconos de redes sociales */
+.social-icon {
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+}
+
+/* Mejoras en el espaciado */
+.section-padding {
+  padding: 5rem 0;
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding: 3rem 0;
+  }
+}
+
+/* Efectos de carga */
+.loading {
+  position: relative;
+  overflow: hidden;
+}
+
+.loading::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
