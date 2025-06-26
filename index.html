@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portafolio de Gabriel Flores</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
   <link href="styles.css" rel="stylesheet">
 </head>
+
 <body class="bg-black text-white">
   <!-- Barra de navegación -->
   <nav class="nav-blur p-4 fixed w-full top-0 z-50 transition-all duration-300">
@@ -16,30 +19,71 @@
         Gabriel Flores
       </a>
       <div class="hidden md:flex space-x-8">
-        <a href="#inicio" class="text-gray-300 hover:text-purple-300 transition-all duration-300 relative group">
+        <!-- INICIO -->
+        <a href="#inicio"
+          class="text-gray-300 hover:text-purple-300 transition-all duration-300 relative group flex items-center gap-1">
           Inicio
-          <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-purple-400 transition-all duration-300 group-hover:w-full"></span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7m-7-7v18" />
+          </svg>
+          <span
+            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-purple-400 transition-all duration-300 group-hover:w-full"></span>
         </a>
-        <a href="#sobre-mi" class="text-gray-300 hover:text-purple-300 transition-all duration-300 relative group">
+
+        <!-- SOBRE MÍ -->
+        <a href="#sobre-mi"
+          class="text-gray-300 hover:text-purple-300 transition-all duration-300 relative group flex items-center gap-1">
           Sobre Mí
-          <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-purple-400 transition-all duration-300 group-hover:w-full"></span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M5.121 17.804A9 9 0 1116.88 6.196 9 9 0 015.12 17.804z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 12v.01" />
+          </svg>
+          <span
+            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-purple-400 transition-all duration-300 group-hover:w-full"></span>
         </a>
-        <a href="#proyectos" class="text-gray-300 hover:text-purple-300 transition-all duration-300 relative group">
+
+        <!-- PROYECTOS -->
+        <a href="#proyectos"
+          class="text-gray-300 hover:text-purple-300 transition-all duration-300 relative group flex items-center gap-1">
           Proyectos
-          <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-purple-400 transition-all duration-300 group-hover:w-full"></span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M9 17v-6a2 2 0 012-2h2a2 2 0 012 2v6m4 0V9a2 2 0 00-2-2H7a2 2 0 00-2 2v8" />
+          </svg>
+          <span
+            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-purple-400 transition-all duration-300 group-hover:w-full"></span>
         </a>
-        <a href="#contacto" class="text-gray-300 hover:text-purple-300 transition-all duration-300 relative group">
+
+        <!-- CONTACTO -->
+        <a href="#contacto"
+          class="text-gray-300 hover:text-purple-300 transition-all duration-300 relative group flex items-center gap-1">
           Contacto
-          <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-purple-400 transition-all duration-300 group-hover:w-full"></span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M21 8a2 2 0 01-2 2H5a2 2 0 010-4h14a2 2 0 012 2z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M21 16a2 2 0 01-2 2H5a2 2 0 010-4h14a2 2 0 012 2z" />
+          </svg>
+          <span
+            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-purple-400 transition-all duration-300 group-hover:w-full"></span>
         </a>
       </div>
     </div>
   </nav>
+
+
   <!-- Sección Héroe -->
   <section id="inicio" class="min-h-screen flex items-center justify-center relative overflow-hidden gradient-bg">
-        <div class="text-center px-4 relative z-10 fade-in">
+    <div class="particles-bg" data-variant="white"></div>
+    <div class="text-center px-4 relative z-10 fade-in">
       <div class="mb-8">
-        <h1 class="text-6xl md:text-8xl font-black mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-purple-600">
+        <h1
+          class="text-6xl md:text-8xl font-black mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-purple-600">
           Gabriel Flores
         </h1>
         <div class="text-xl md:text-3xl text-gray-300 mb-2">
@@ -49,12 +93,14 @@
           Creando experiencias digitales excepcionales con código limpio y diseño innovador
         </p>
       </div>
-      
+
       <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-        <a href="#proyectos" class="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-full hover:from-purple-600 hover:to-pink-600 transition-all duration-300 glow font-semibold">
+        <a href="#proyectos"
+          class="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-full hover:from-purple-600 hover:to-pink-600 transition-all duration-300 glow font-semibold">
           Ver Proyectos
         </a>
-        <a href="#contacto" class="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-full hover:bg-purple-400 hover:text-white transition-all duration-300 font-semibold">
+        <a href="#contacto"
+          class="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-full hover:bg-purple-400 hover:text-white transition-all duration-300 font-semibold">
           Contáctame
         </a>
       </div>
@@ -62,23 +108,32 @@
   </section>
 
   <!-- Sección Sobre Mí -->
-  <section id="sobre-mi" class="py-20 bg-white text-gray-900 relative">
+  <section id="sobre-mi" class="py-20 bg-gradient-to-br from-white via-purple-50 to-pink-50 text-gray-900 relative">
+    <div class="particles-bg" data-variant="color"></div>
     <div class="container mx-auto px-4">
-      <div class="fade-in">
-        <h2 class="text-5xl font-bold text-center mb-16 text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
+      <div class="fade-in glass-light p-8">
+        <h2
+          class="text-5xl font-bold text-center mb-16 text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
           Sobre Mí
         </h2>
-        
-        <div class="max-w-4xl mx-auto">
+
+        <div class="max-w-7xl mx-auto">
           <div class="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <p class="text-lg mb-6 leading-relaxed">
-                Soy Gabriel Flores, un desarrollador Full Stack apasionado por crear soluciones digitales que marquen la diferencia. Con experiencia en tecnologías modernas como React, Node.js, Python y Flutter.
+                Hola, soy Gabriel Flores, estudiante de Desarrollo de Software Multiplataforma con una fuerte curiosidad
+                por cómo funcionan las tecnologías que usamos todos los días. Me interesa especialmente el desarrollo de
+                soluciones prácticas con herramientas como Python, JavaScript, MQTT y plataformas como Raspberry Pi.
               </p>
               <p class="text-lg mb-8 leading-relaxed">
-                Mi enfoque se centra en crear interfaces intuitivas, código limpio y arquitecturas escalables. Siempre estoy en busca de nuevos desafíos y oportunidades para innovar.
+                He trabajado en proyectos que combinan software, hardware e inteligencia de datos, desde el diseño de
+                sistemas de monitoreo con sensores hasta el despliegue de aplicaciones web y la visualización de
+                información con herramientas como Neo4j y New Relic.
               </p>
-              
+              <p class="text-lg mb-8 leading-relaxed">
+                Me apasiona aprender, experimentar y construir cosas útiles. Busco constantemente nuevos retos donde
+                pueda aplicar mis conocimientos y seguir creciendo como desarrollador.
+              </p>
               <div class="grid grid-cols-2 gap-4">
                 <div class="skill-badge text-white px-4 py-2 rounded-full text-center font-semibold">
                   JavaScript
@@ -94,11 +149,15 @@
                 </div>
               </div>
             </div>
-            
+
             <div class="relative">
-              <div class="w-80 h-80 mx-auto bg-gradient-to-br from-purple-400 to-pink-400 rounded-full opacity-20 animate-pulse"></div>
+              <div
+                class="w-80 h-80 mx-auto bg-gradient-to-br from-purple-400 to-pink-400 rounded-full opacity-20 animate-pulse">
+              </div>
               <div class="absolute inset-0 flex items-center justify-center">
-                <div class="text-6xl">👨‍💻</div>
+                <div class="imagen" style="width: 300px; height: 300px; overflow: hidden; border-radius: 50%;">
+                  <img src="gbflores.png" class="w-full h-full object-cover rounded-full">
+                </div>
               </div>
             </div>
           </div>
@@ -109,19 +168,22 @@
 
   <!-- Sección Proyectos -->
   <section id="proyectos" class="py-20 bg-gradient-to-br from-purple-950 via-gray-900 to-black">
+    <div class="particles-bg" data-variant="white"></div>
     <div class="container mx-auto px-4">
       <div class="fade-in">
-        <h2 class="text-5xl font-bold text-center mb-16 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
+        <h2
+          class="text-5xl font-bold text-center mb-16 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
           Proyectos Destacados
         </h2>
-        
+
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- Proyecto 1 -->
           <div class="project-card p-8 rounded-2xl hover-scale glow">
             <div class="text-4xl mb-4">🚀</div>
             <h3 class="text-2xl font-bold mb-4 text-white">TaskFlow Pro</h3>
             <p class="text-gray-300 mb-6 leading-relaxed">
-              Aplicación web completa para gestión de proyectos desarrollada con React, Node.js y MongoDB. Incluye autenticación, tiempo real y analytics.
+              Aplicación web completa para gestión de proyectos desarrollada con React, Node.js y MongoDB. Incluye
+              autenticación, tiempo real y analytics.
             </p>
             <div class="flex flex-wrap gap-2 mb-6">
               <span class="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-sm">React</span>
@@ -138,7 +200,8 @@
             <div class="text-4xl mb-4">📱</div>
             <h3 class="text-2xl font-bold mb-4 text-white">HabitTracker</h3>
             <p class="text-gray-300 mb-6 leading-relaxed">
-              App móvil multiplataforma con Flutter para seguimiento de hábitos. Incluye notificaciones, estadísticas y gamificación.
+              App móvil multiplataforma con Flutter para seguimiento de hábitos. Incluye notificaciones, estadísticas y
+              gamificación.
             </p>
             <div class="flex flex-wrap gap-2 mb-6">
               <span class="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-sm">Flutter</span>
@@ -155,7 +218,8 @@
             <div class="text-4xl mb-4">🛍️</div>
             <h3 class="text-2xl font-bold mb-4 text-white">ReservaAPI</h3>
             <p class="text-gray-300 mb-6 leading-relaxed">
-              API REST robusta con Python y FastAPI para sistema de reservas. Incluye autenticación JWT, validaciones y documentación automática.
+              API REST robusta con Python y FastAPI para sistema de reservas. Incluye autenticación JWT, validaciones y
+              documentación automática.
             </p>
             <div class="flex flex-wrap gap-2 mb-6">
               <span class="bg-green-500/20 text-green-300 px-3 py-1 rounded-full text-sm">Python</span>
@@ -172,47 +236,41 @@
   </section>
 
   <!-- Sección Contacto -->
-  <section id="contacto" class="py-20 bg-gradient-to-br from-gray-50 to-white text-gray-900">
+  <section id="contacto" class="py-20 bg-gradient-to-br from-white via-purple-50 to-pink-50 text-gray-900">
+    <div class="particles-bg" data-variant="color"></div>
     <div class="container mx-auto px-4">
-      <div class="fade-in">
-        <h2 class="text-5xl font-bold text-center mb-16 text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
+      <div class="fade-in glass-light p-8">
+        <h2
+          class="text-5xl font-bold text-center mb-16 text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
           Trabajemos Juntos
         </h2>
-        
+
         <div class="max-w-2xl mx-auto">
           <div class="contact-form p-8 rounded-2xl glow">
             <div class="space-y-6">
               <div>
-                <input type="text" placeholder="Tu nombre" 
-                       class="w-full p-4 rounded-xl bg-white/0 backdrop-blur-sm border border-gray-200 focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20 transition-all duration-300">
+                <input type="text" placeholder="Tu nombre"
+                  class="w-full p-4 rounded-xl bg-white/0 backdrop-blur-sm border border-gray-200 focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20 transition-all duration-300">
               </div>
               <div>
-                <input type="email" placeholder="Tu correo electrónico" 
-                       class="w-full p-4 rounded-xl bg-white/0 backdrop-blur-sm border border-gray-200 focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20 transition-all duration-300">
+                <input type="email" placeholder="Tu correo electrónico"
+                  class="w-full p-4 rounded-xl bg-white/0 backdrop-blur-sm border border-gray-200 focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20 transition-all duration-300">
               </div>
               <div>
-                <textarea placeholder="Tu mensaje" rows="6"
-                          class="w-full p-4 rounded-xl bg-white/0 backdrop-blur-sm border border-gray-200 focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20 transition-all duration-300 resize-none"></textarea>
+                <textarea placeholder="Tu mensaje" rows="4"
+                  class="w-full p-4 rounded-xl bg-white/0 backdrop-blur-sm border border-gray-200 focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20 transition-all duration-300 resize-none"></textarea>
               </div>
-              
+
               <div class="flex flex-col sm:flex-row gap-4">
-                <button class="flex-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white p-4 rounded-xl hover:from-purple-600 hover:to-pink-600 transition-all duration-300 font-semibold glow">
+                <button
+                  class="flex-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white p-4 rounded-xl hover:from-purple-600 hover:to-pink-600 transition-all duration-300 font-semibold glow ">
                   Enviar Mensaje
                 </button>
-                <a href="https://wa.me/+524272257172" target="_blank" 
-                   class="flex-1 bg-green-500 text-white p-4 rounded-xl text-center hover:bg-green-600 transition-all duration-300 font-semibold glow">
+                <a href="https://wa.me/+524272257172" target="_blank"
+                  class="flex-1 bg-green-500 text-white p-4 rounded-xl text-center hover:bg-green-600 transition-all duration-300 font-semibold glow">
                   💬 WhatsApp
                 </a>
               </div>
-            </div>
-          </div>
-          
-          <div class="text-center mt-12">
-            <p class="text-gray-600 mb-4">También puedes encontrarme en:</p>
-            <div class="flex justify-center space-x-6">
-              <a href="#" class="text-gray-400 hover:text-purple-600 transition-colors text-2xl">🐙</a>
-              <a href="#" class="text-gray-400 hover:text-blue-600 transition-colors text-2xl">💼</a>
-              <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors text-2xl">🐦</a>
             </div>
           </div>
         </div>
@@ -230,4 +288,5 @@
 
   <script src="script.js"></script>
 </body>
+
 </html>
