@@ -21,7 +21,7 @@ const typingElement = document.getElementById('typing-text');
 
 function typeWriter() {
   const currentText = texts[textIndex];
-  
+
   if (isDeleting) {
     typingElement.textContent = currentText.substring(0, charIndex - 1);
     charIndex--;
@@ -45,7 +45,7 @@ function typeWriter() {
 }
 
 // Iniciar efecto de escritura
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   typeWriter();
 });
 
@@ -53,19 +53,19 @@ document.addEventListener('DOMContentLoaded', function() {
 function createParticle() {
   const particlesContainer = document.getElementById('particles');
   if (!particlesContainer) return;
-  
+
   const particle = document.createElement('div');
   particle.className = 'particle';
-  
+
   const size = Math.random() * 4 + 2;
   particle.style.width = size + 'px';
   particle.style.height = size + 'px';
   particle.style.left = Math.random() * 100 + '%';
   particle.style.animationDuration = (Math.random() * 3 + 2) + 's';
   particle.style.animationDelay = Math.random() * 2 + 's';
-  
+
   particlesContainer.appendChild(particle);
-  
+
   // Remover partícula después de la animación
   setTimeout(() => {
     if (particle.parentNode) {
@@ -105,69 +105,69 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Observar todas las secciones
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   document.querySelectorAll('section').forEach(section => {
     observer.observe(section);
   });
 });
 
 // Validación de formulario y integración con WhatsApp
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const contactButton = document.querySelector('.contact-form button');
   if (contactButton) {
-    contactButton.addEventListener('click', function(e) {
+    contactButton.addEventListener('click', function (e) {
       e.preventDefault();
-      
+
       const nameInput = document.querySelector('input[placeholder="Tu nombre"]');
       const emailInput = document.querySelector('input[placeholder="Tu correo electrónico"]');
       const messageInput = document.querySelector('textarea[placeholder="Tu mensaje"]');
-      
+
       if (!nameInput || !emailInput || !messageInput) {
         console.error('No se encontraron los campos del formulario');
         return;
       }
-      
+
       const name = nameInput.value.trim();
       const email = emailInput.value.trim();
       const message = messageInput.value.trim();
-      
+
       // Validaciones
       if (!name) {
         showNotification('Por favor ingresa tu nombre', 'error');
         nameInput.focus();
         return;
       }
-      
+
       if (!email) {
         showNotification('Por favor ingresa tu correo electrónico', 'error');
         emailInput.focus();
         return;
       }
-      
+
       if (!isValidEmail(email)) {
         showNotification('Por favor ingresa un correo electrónico válido', 'error');
         emailInput.focus();
         return;
       }
-      
+
       if (!message) {
         showNotification('Por favor ingresa tu mensaje', 'error');
         messageInput.focus();
         return;
       }
-      
+
       // Crear mensaje para WhatsApp
       const whatsappMessage = `Hola Gabriel! 👋\n\nSoy ${name}.\n\n${message}\n\nMi email es: ${email}`;
       const whatsappURL = `https://wa.me/+524272257172?text=${encodeURIComponent(whatsappMessage)}`;
-      
+
       // Abrir WhatsApp
       window.open(whatsappURL, '_blank');
-      
+
       // Limpiar formulario
       nameInput.value = '';
       emailInput.value = '';
       messageInput.value = '';
-      
+
       showNotification('¡Mensaje enviado! Se abrirá WhatsApp en una nueva ventana.', 'success');
     });
   }
@@ -202,3 +202,48 @@ function showNotification(message, type = 'info') {
     notification.remove();
   }, 3000);
 }
+
+(function () {
+  // Configuración de partículas
+  const PARTICLE_CONFIG = {
+    white: [
+      "rgba(255,255,255,0.85)",
+      "rgba(255,255,255,0.75)",
+      "rgba(255,255,255,0.65)",
+      "rgba(255,255,255,0.55)"
+    ],
+    color: [
+      "rgba(168,85,247,0.85)", // morado
+      "rgba(236,72,153,0.75)", // rosa
+      "rgba(59,130,246,0.70)", // azul
+      "rgba(168,85,247,0.65)", // morado claro
+      "rgba(236,72,153,0.60)"  // rosa claro
+    ]
+  };
+
+  // Para cada .particles-bg, genera partículas
+  document.querySelectorAll('.particles-bg').forEach(bg => {
+    const variant = bg.dataset.variant || 'color';
+    const colors = PARTICLE_CONFIG[variant] || PARTICLE_CONFIG.color;
+    const numParticles = 32; // ¡Más partículas!
+
+    for (let i = 0; i < numParticles; i++) {
+      const particle = document.createElement('div');
+      particle.className = 'particle-anim';
+      // Tamaño aleatorio
+      const size = Math.random() * 20 + 16; // 16px a 36px
+      particle.style.width = `${size}px`;
+      particle.style.height = `${size}px`;
+      // Color aleatorio
+      particle.style.background = colors[Math.floor(Math.random() * colors.length)];
+      // Posición aleatoria
+      particle.style.top = `${Math.random() * 95}%`;
+      particle.style.left = `${Math.random() * 98}%`;
+      // Animación con retardo aleatorio
+      particle.style.animationDelay = `${Math.random() * 3.5}s`;
+      // Velocidad variable (más rápido)
+      particle.style.animationDuration = `${2.5 + Math.random() * 2.5}s`;
+      bg.appendChild(particle);
+    }
+  });
+})();
