@@ -298,3 +298,8 @@ button:disabled {
     opacity: 0.85;
   }
 }
+#redes:hover {
+  color: white;
+  transform: translateY(-5px) rotate(360deg);
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
