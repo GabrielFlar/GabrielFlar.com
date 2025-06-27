@@ -42,38 +42,6 @@ body {
   background: linear-gradient(135deg, #000000 0%, #1a0033 50%, #4B0082 100%);
 }
 
-/* Contenedor de partículas */
-.particles-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  pointer-events: none;
-}
-
-/* Partículas flotantes */
-.particle {
-  position: absolute;
-  background: #A855F7;
-  border-radius: 50%;
-  opacity: 0.6;
-  animation: float 6s ease-in-out infinite;
-}
-
-@keyframes float {
-
-  0%,
-  100% {
-    transform: translateY(0px) rotate(0deg);
-  }
-
-  50% {
-    transform: translateY(-20px) rotate(180deg);
-  }
-}
-
 /* Efecto de escritura */
 .typing-effect {
   border-right: 2px solid #A855F7;

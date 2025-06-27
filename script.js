@@ -49,46 +49,6 @@ document.addEventListener('DOMContentLoaded', function () {
   typeWriter();
 });
 
-// Crear partículas flotantes
-function createParticle() {
-  const particlesContainer = document.getElementById('particles');
-  if (!particlesContainer) return;
-
-  const particle = document.createElement('div');
-  particle.className = 'particle';
-
-  const size = Math.random() * 4 + 2;
-  particle.style.width = size + 'px';
-  particle.style.height = size + 'px';
-  particle.style.left = Math.random() * 100 + '%';
-  particle.style.animationDuration = (Math.random() * 3 + 2) + 's';
-  particle.style.animationDelay = Math.random() * 2 + 's';
-
-  particlesContainer.appendChild(particle);
-
-  // Remover partícula después de la animación
-  setTimeout(() => {
-    if (particle.parentNode) {
-      particle.remove();
-    }
-  }, 5000);
-}
-
-// Generar partículas cada 300ms
-setInterval(createParticle, 300);
-
-// Cambiar fondo de navegación al hacer scroll
-window.addEventListener('scroll', () => {
-  const nav = document.querySelector('nav');
-  if (nav) {
-    if (window.scrollY > 50) {
-      nav.style.background = 'rgba(0, 0, 0, 0.95)';
-    } else {
-      nav.style.background = 'rgba(0, 0, 0, 0.8)';
-    }
-  }
-});
-
 // Intersection Observer para animaciones
 const observerOptions = {
   threshold: 0.1,
@@ -204,7 +164,6 @@ function showNotification(message, type = 'info') {
 }
 
 (function () {
-  // Configuración de partículas
   const PARTICLE_CONFIG = {
     white: [
       "rgba(255,255,255,0.85)",
@@ -213,11 +172,11 @@ function showNotification(message, type = 'info') {
       "rgba(255,255,255,0.55)"
     ],
     color: [
-      "rgba(168,85,247,0.85)", // morado
-      "rgba(236,72,153,0.75)", // rosa
-      "rgba(59,130,246,0.70)", // azul
-      "rgba(168,85,247,0.65)", // morado claro
-      "rgba(236,72,153,0.60)"  // rosa claro
+      "rgba(168,85,247,0.85)", 
+      "rgba(236,72,153,0.75)", 
+      "rgba(59,130,246,0.70)", 
+      "rgba(168,85,247,0.65)",
+      "rgba(236,72,153,0.60)"
     ]
   };
 
@@ -225,23 +184,18 @@ function showNotification(message, type = 'info') {
   document.querySelectorAll('.particles-bg').forEach(bg => {
     const variant = bg.dataset.variant || 'color';
     const colors = PARTICLE_CONFIG[variant] || PARTICLE_CONFIG.color;
-    const numParticles = 32; // ¡Más partículas!
+    const numParticles = 32;
 
     for (let i = 0; i < numParticles; i++) {
       const particle = document.createElement('div');
       particle.className = 'particle-anim';
-      // Tamaño aleatorio
-      const size = Math.random() * 20 + 16; // 16px a 36px
+      const size = Math.random() * 20 + 16;
       particle.style.width = `${size}px`;
       particle.style.height = `${size}px`;
-      // Color aleatorio
       particle.style.background = colors[Math.floor(Math.random() * colors.length)];
-      // Posición aleatoria
       particle.style.top = `${Math.random() * 95}%`;
       particle.style.left = `${Math.random() * 98}%`;
-      // Animación con retardo aleatorio
       particle.style.animationDelay = `${Math.random() * 3.5}s`;
-      // Velocidad variable (más rápido)
       particle.style.animationDuration = `${2.5 + Math.random() * 2.5}s`;
       bg.appendChild(particle);
     }
