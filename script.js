@@ -13,7 +13,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // Efecto de escritura en el título principal
-const texts = ["Desarrollador Full Stack", "Creador de Experiencias", "Solucionador de Problemas"];
+const texts = ["Desarrollador de aplicaciones de monitoreo, health life y mucho más", "Creador de Experiencias", "Solucionador de Problemas"];
 let textIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
